@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-using AliScrapper;
+using WebScrapper;
 
 namespace AliScrapperConsole
 {

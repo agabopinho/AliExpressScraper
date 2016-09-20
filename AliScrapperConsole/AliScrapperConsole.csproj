@@ -39,12 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NReco.PhantomJS, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NReco.PhantomJS.1.0.2.0\lib\net40-Client\NReco.PhantomJS.dll</HintPath>
+    <Reference Include="NReco.PhantomJS, Version=1.0.3.0, Culture=neutral, PublicKeyToken=f160d8c5e2ae66b6, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.PhantomJS.1.0.3.0\lib\net40-Client\NReco.PhantomJS.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
     <Compile Include="Models\GetProductModel.cs" />
+    <Compile Include="Models\ProductModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,10 +68,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AliScrapper\AliScrapper.csproj">
-      <Project>{646e4a12-2de5-4574-b73e-ab6e6548921a}</Project>
-      <Name>AliScrapper</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Helper.ConsoleHelper\Helper.ConsoleHelper.csproj">
       <Project>{d0edb386-c812-4c0f-86d4-8c7ffc5218ed}</Project>
       <Name>Helper.ConsoleHelper</Name>
@@ -79,10 +76,24 @@
       <Project>{5eaae6df-1dbf-4cd1-bcb4-c1cab46f76ad}</Project>
       <Name>Helper.PhantomJS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebScrapper\WebScrapper.csproj">
+      <Project>{646e4a12-2de5-4574-b73e-ab6e6548921a}</Project>
+      <Name>WebScrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="phantomjs.exe">
+    <Content Include="..\packages\PhantomJS.2.1.1\tools\phantomjs\phantomjs.exe">
+      <Link>phantomjs.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JS_SCRIPT\AliExpress.Product.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JS_SCRIPT\AliExpress.ProductList.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="phantomjs-license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

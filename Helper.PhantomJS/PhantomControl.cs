@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Helper.PhantomJS
 {
-    public class PhantomControl : NReco.PhantomJS.PhantomJS, IDisposable
+    public class PhantomControl : NReco.PhantomJS.PhantomJS
     {
         public static bool CONFIG_PROXY = false;
         public static string CONFIG_PROXY_USERNAME = null;
@@ -87,30 +87,6 @@ namespace Helper.PhantomJS
             }
 
             CustomArgs += string.Format("{0}={1}", name, value);
-        }
-
-        protected void Dispose(bool disposing)
-        {
-            if (!disposed)
-            {
-                if (disposing)
-                {    
-                }
-
-                Abort();
-
-                disposed = true;
-            }
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-        }
-
-        ~PhantomControl()
-        {
-            Dispose(false);
         }
     }
 }
