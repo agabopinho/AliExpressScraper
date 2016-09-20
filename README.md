@@ -10,9 +10,9 @@ Ali Express product web scrapper
 OR
 
 > alishop.exe -ProductId=32704963843 -StoreId=1195010 -OutputType=TextFile
-
-Output:
-
+```
+##Output
+```
 {
   "PageConfig": {
     "aeUSserver": "//us.ae.aliexpress.com",
