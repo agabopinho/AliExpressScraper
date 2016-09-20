@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="BaseDirectories.cs" />
     <Compile Include="Models\GetProductModel.cs" />
     <Compile Include="Models\ProductModels.cs" />
     <Compile Include="Program.cs" />

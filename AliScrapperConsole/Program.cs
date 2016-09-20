@@ -16,6 +16,7 @@ namespace AliScrapperConsole
     public class Program
     {
         public static CultureInfo CulturePtBr = CultureInfo.GetCultureInfo("pt-br");
+        public static string AliExpressProductScript = BaseDirectories.GetJsScriptDirectory() + "AliExpress.Product.js";
 
         public static void PhantomConfig()
         {
@@ -109,7 +110,7 @@ namespace AliScrapperConsole
 
         public static ProductDetailModel GetProductDetails(GetProductModel item)
         {
-            var job = new Job(item.Url, JobConfiguration.AliExpressProductScript);
+            var job = new Job(item.Url, AliExpressProductScript);
 
             Program.Try(item.RefName, item.Url, 3, () => job.Run());
 

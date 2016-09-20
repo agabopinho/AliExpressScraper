@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Helper.PhantomJS
+namespace AliScrapperConsole
 {
     public class BaseDirectories
     {
