@@ -9,7 +9,7 @@ Ali Express Product Web Scrapper
 
 OR
 
-> alishop.exe -ProductId=32704963843 -StoreId=1195010 -OutputType=TextFile
+> alishop.exe -ProductId=32704963843 -StoreId=1195010 -OutputType=TextFile -SuppressHeader=true
 ```
 ##Output
 ```
