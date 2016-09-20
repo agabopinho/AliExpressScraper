@@ -67,17 +67,38 @@ namespace AliScrapperConsole
                 Console.WriteLine();
             }
 
-            var productId = Argument.GetArgumentLong("-ProductId", true);
-            var storeId = Argument.GetArgumentInt("-StoreId", true);
+            var productId = Argument.GetArgumentLong("-ProductId");
+            var storeId = Argument.GetArgumentInt("-StoreId");
+            var productUrl = Argument.GetArgumentString("-ProductUrl");
 
-            var model = new Models.GetProductModel
+            var model = default(GetProductModel);
+
+            if (productId.HasValue && storeId.HasValue)
             {
-                ProductId = productId.Value,
-                RefName = productId.Value.ToString(),
-                Url = AppSettings.AliExpressProductDetailUrl
-                  .Replace("{store_id}", storeId.Value.ToString())
-                  .Replace("{product_id}", productId.Value.ToString())
-            };
+                model = new GetProductModel
+                {
+                    ProductId = productId.Value,
+                    RefName = productId.Value.ToString(),
+                    Url = AppSettings.AliExpressProductDetailUrl
+                      .Replace("{store_id}", storeId.Value.ToString())
+                      .Replace("{product_id}", productId.Value.ToString())
+                };
+            }
+            else if (productUrl != null)
+            {
+                model = new GetProductModel
+                {
+                    ProductId = -1,
+                    RefName = "-1",
+                    Url = productUrl
+                };
+            }
+            else
+            {
+                Print.PrintText("AliGetProduct", "Use -ProductId={{value}} -StoreId={{value}} or -ProductUrl={{value}}");
+
+                return false;
+            }
 
             var details = GetProductDetails(model);
 

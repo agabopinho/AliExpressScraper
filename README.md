@@ -9,7 +9,15 @@ Ali Express Product Web Scrapper
 
 OR
 
-> alishop.exe -ProductId=32704963843 -StoreId=1195010 -OutputType=TextFile -SuppressHeader=true
+> alishop.exe -ProductUrl=https://pt.aliexpress.com/store/product/Original-Meizu-MEILAN-E-5-5-inch-2-5D-FHD-1080P-MTK-Helio-P10-Octa-Core/103919_32712980451.html?detailNewVersion=&categoryId=5090301&spm=a2g03.8047714.2169898.2.6F0m5X
+
+MORE
+
+Help
+
+-OutputType               Output Type, default is Console [ Enum { Console | TextFile } ] [ OPTIONAL ].
+-SuppressHeader           Suppress header, assembly information [ BOOL ] [ OPTIONAL ].
+-H                        For help, with -MethodName for help for method [ BOOL ] [ OPTIONAL ].
 ```
 ##Output
 ```
