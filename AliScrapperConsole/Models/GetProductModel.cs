@@ -1,4 +1,4 @@
-﻿namespace AliScrapperConsole.Models
+﻿namespace AliScraperConsole.Models
 {
     public class GetProductModel
     {

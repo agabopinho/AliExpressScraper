@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebScrapper
+namespace WebScraper
 {
     public class JobEventArgs : EventArgs
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliScrapperConsole
+namespace AliScraperConsole
 {
     public static class AppSettings
     {

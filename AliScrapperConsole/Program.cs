@@ -1,6 +1,6 @@
 ﻿using Helper.ConsoleHelper;
 using Helper.PhantomJS;
-using AliScrapperConsole.Models;
+using AliScraperConsole.Models;
 using Newtonsoft.Json;
 using System;
 using System.Configuration;
@@ -9,9 +9,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-using WebScrapper;
+using WebScraper;
 
-namespace AliScrapperConsole
+namespace AliScraperConsole
 {
     public class Program
     {

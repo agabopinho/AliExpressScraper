@@ -1,6 +1,6 @@
-# AliExpressScrapper
+# AliExpressScraper
 
-Ali Express Product Web Scrapper
+Ali Express Product Web Scraper
 
 ##Usage example
 

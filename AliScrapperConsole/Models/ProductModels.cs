@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 
-namespace AliScrapperConsole.Models
+namespace AliScraperConsole.Models
 {
     public class ProductDetailModel
     {
