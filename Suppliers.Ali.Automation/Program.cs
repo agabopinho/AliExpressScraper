@@ -1,6 +1,6 @@
-﻿using ISAA.Helper.ConsoleHelper;
-using ISAA.Helper.PhantomJS;
-using ISAA.Suppliers.Ali.Automation.Models;
+﻿using Helper.ConsoleHelper;
+using Helper.PhantomJS;
+using AliScrapperConsole.Models;
 using Newtonsoft.Json;
 using System;
 using System.Configuration;
@@ -9,8 +9,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
+using AliScrapper;
 
-namespace ISAA.Suppliers.Ali.Automation
+namespace AliScrapperConsole
 {
     public class Program
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISAA.Helper.PhantomJS
+namespace Helper.PhantomJS
 {
     public class PhantomControl : NReco.PhantomJS.PhantomJS, IDisposable
     {

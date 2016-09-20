@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISAA.Suppliers.Ali.Automation
+namespace AliScrapperConsole
 {
     public static class AppSettings
     {

@@ -1,4 +1,4 @@
-﻿using ISAA.Helper.PhantomJS;
+﻿using Helper.PhantomJS;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ISAA.Suppliers.Ali
+namespace AliScrapper
 {
     public class Job
     {

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ISAA.Suppliers.Ali")]
+[assembly: AssemblyTitle("AliScrapper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Isaasoft")]
-[assembly: AssemblyProduct("ISAA.Suppliers.Ali")]
+[assembly: AssemblyProduct("AliScrapper")]
 [assembly: AssemblyCopyright("Copyright © Isaasoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

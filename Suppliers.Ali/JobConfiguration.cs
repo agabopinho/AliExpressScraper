@@ -1,4 +1,4 @@
-﻿using ISAA.Helper.PhantomJS;
+﻿using Helper.PhantomJS;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISAA.Suppliers.Ali
+namespace AliScrapper
 {
     public static class JobConfiguration
     {

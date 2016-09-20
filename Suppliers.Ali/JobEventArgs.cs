@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISAA.Suppliers.Ali
+namespace AliScrapper
 {
     public class JobEventArgs : EventArgs
     {

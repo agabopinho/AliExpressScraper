@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISAA.Helper.ConsoleHelper
+namespace Helper.ConsoleHelper
 {
     public static class Argument
     {

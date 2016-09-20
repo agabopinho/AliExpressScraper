@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISAA.Helper.ConsoleHelper
+namespace Helper.ConsoleHelper
 {
     public class Print
     {

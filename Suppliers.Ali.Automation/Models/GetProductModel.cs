@@ -1,4 +1,4 @@
-﻿namespace ISAA.Suppliers.Ali.Automation.Models
+﻿namespace AliScrapperConsole.Models
 {
     public class GetProductModel
     {
