@@ -99,7 +99,7 @@ namespace AliScrapperConsole
                 productDetail = JsonConvert.DeserializeObject<ProductDetailModel>(job.ReturnedJSON);
 
                 Print.PrintStatus(item.RefName, "RunComplete", item.Url, ConsoleColor.Green);
-                Print.PrintStatus(item.RefName, "JsonResult", item.Url + Environment.NewLine + JsonConvert.SerializeObject(productDetail), ConsoleColor.Green);
+                Print.PrintStatus(item.RefName, "JsonResult", item.Url + Environment.NewLine + JsonConvert.SerializeObject(productDetail, Formatting.Indented), ConsoleColor.Green);
             }
             else
             {
