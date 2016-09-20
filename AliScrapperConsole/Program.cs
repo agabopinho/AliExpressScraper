@@ -79,7 +79,9 @@ namespace AliScrapperConsole
                   .Replace("{product_id}", productId.Value.ToString())
             };
 
-            GetProductDetails(model);
+            var details = GetProductDetails(model);
+
+            Console.Write(JsonConvert.SerializeObject(details, Formatting.Indented));
 
             return true;
         }
@@ -88,8 +90,6 @@ namespace AliScrapperConsole
         {
             var job = new Job(item.Url, JobConfiguration.AliExpressProductScript);
 
-            Print.PrintStatus(item.RefName, "BeforeRun", item.Url);
-
             Program.Try(item.RefName, item.Url, 3, () => job.Run());
 
             var productDetail = default(ProductDetailModel);
@@ -97,9 +97,6 @@ namespace AliScrapperConsole
             if (job.ReturnedJSON != null)
             {
                 productDetail = JsonConvert.DeserializeObject<ProductDetailModel>(job.ReturnedJSON);
-
-                Print.PrintStatus(item.RefName, "RunComplete", item.Url, ConsoleColor.Green);
-                Print.PrintStatus(item.RefName, "JsonResult", item.Url + Environment.NewLine + JsonConvert.SerializeObject(productDetail, Formatting.Indented), ConsoleColor.Green);
             }
             else
             {

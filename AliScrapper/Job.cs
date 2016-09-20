@@ -72,7 +72,7 @@ namespace AliScrapper
         {
             using (var phantomJS = new PhantomControl())
             {
-                ReadyState = StateType.BeforeRun;
+                ReadyState = StateType.Running;
 
                 var outputStream = phantomJS.Run(JsFile, new[] { NavigateUrl }, null);
 
@@ -96,7 +96,8 @@ namespace AliScrapper
 
         public enum StateType
         {
-            BeforeRun,
+            None,
+            Running,
             RunComplete,
         }
     }
