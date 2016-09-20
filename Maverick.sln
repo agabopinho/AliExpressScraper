@@ -14,15 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4D94EC
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliScrapperConsole", "AliScrapperConsole\AliScrapperConsole.csproj", "{508A0895-57D1-4C22-A483-FA341192A177}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FBF39F31-D12F-4E70-933C-9695E1AEED16}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapper", "WebScrapper\WebScrapper.csproj", "{646E4A12-2DE5-4574-B73E-AB6E6548921A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliScraperConsole", "AliScraperConsole\AliScraperConsole.csproj", "{508A0895-57D1-4C22-A483-FA341192A177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper", "WebScraper\WebScraper.csproj", "{646E4A12-2DE5-4574-B73E-AB6E6548921A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

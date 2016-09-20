@@ -77,9 +77,9 @@
       <Project>{5eaae6df-1dbf-4cd1-bcb4-c1cab46f76ad}</Project>
       <Name>Helper.PhantomJS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebScrapper\WebScrapper.csproj">
+    <ProjectReference Include="..\WebScraper\WebScraper.csproj">
       <Project>{646e4a12-2de5-4574-b73e-ab6e6548921a}</Project>
-      <Name>WebScrapper</Name>
+      <Name>WebScraper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
