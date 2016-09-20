@@ -11,8 +11,6 @@ OR
 
 > alishop.exe -ProductUrl=https://pt.aliexpress.com/store/product/Original-Meizu-MEILAN-E-5-5-inch-2-5D-FHD-1080P-MTK-Helio-P10-Octa-Core/103919_32712980451.html?detailNewVersion=&categoryId=5090301&spm=a2g03.8047714.2169898.2.6F0m5X
 
-MORE
-
 Help
 
 -OutputType               Output Type, default is Console [ Enum { Console | TextFile } ] [ OPTIONAL ].
