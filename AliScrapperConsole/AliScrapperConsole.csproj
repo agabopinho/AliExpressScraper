@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{646E4A12-2DE5-4574-B73E-AB6E6548921A}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{508A0895-57D1-4C22-A483-FA341192A177}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ISAA.Suppliers.Ali</RootNamespace>
-    <AssemblyName>ISAA.Suppliers.Ali</AssemblyName>
+    <RootNamespace>ISAA.Suppliers.Ali.Automation</RootNamespace>
+    <AssemblyName>alishop</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -20,6 +20,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -29,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -46,11 +48,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,32 +57,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Job.cs" />
-    <Compile Include="JobConfiguration.cs" />
-    <Compile Include="JobEventArgs.cs" />
-    <Compile Include="Models\ProductModels.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="Models\GetProductModel.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JS_SCRIPT\AliExpress.ProductList.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="JS_SCRIPT\AliExpress.Product.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\AliScrapper\AliScrapper.csproj">
+      <Project>{646e4a12-2de5-4574-b73e-ab6e6548921a}</Project>
+      <Name>AliScrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helper.ConsoleHelper\Helper.ConsoleHelper.csproj">
+      <Project>{d0edb386-c812-4c0f-86d4-8c7ffc5218ed}</Project>
+      <Name>Helper.ConsoleHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Helper.PhantomJS\Helper.PhantomJS.csproj">
       <Project>{5eaae6df-1dbf-4cd1-bcb4-c1cab46f76ad}</Project>
       <Name>Helper.PhantomJS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="phantomjs.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
