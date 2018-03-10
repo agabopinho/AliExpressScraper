@@ -2,7 +2,7 @@
 
 Ali Express Product Web Scraper
 
-##Usage
+## Usage
 
 ```
 > alishop.exe -ProductId=32704963843
@@ -16,9 +16,12 @@ Help
 -OutputType               Output Type, default is Console [ Enum { Console | TextFile } ] [ OPTIONAL ].
 -SuppressHeader           Suppress header, assembly information [ BOOL ] [ OPTIONAL ].
 -H                        For help, with -MethodName for help for method [ BOOL ] [ OPTIONAL ].
+```
 
-Example
 
+## Example
+
+```
 > alishop.exe -ProductUrl=https://pt.alie
 xpress.com/item/4Pcs-set-Stainless-Steel-Omelette-Egg-Frying-Mold-Love-Flower-Round-Star-Molds/32591756332.html
 
