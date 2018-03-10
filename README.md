@@ -22,8 +22,7 @@ Help
 ## Example
 
 ```
-> alishop.exe -ProductUrl=https://pt.alie
-xpress.com/item/4Pcs-set-Stainless-Steel-Omelette-Egg-Frying-Mold-Love-Flower-Round-Star-Molds/32591756332.html
+> alishop.exe -ProductUrl=https://pt.aliexpress.com/item/4Pcs-set-Stainless-Steel-Omelette-Egg-Frying-Mold-Love-Flower-Round-Star-Molds/32591756332.html
 
  Assembly
 
