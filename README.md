@@ -5,7 +5,7 @@ Ali Express Product Web Scraper
 ##Usage example
 
 ```
-> alishop.exe -ProductId=32704963843 -StoreId=1195010 
+> alishop.exe -ProductId=32704963843
 
 OR
 
