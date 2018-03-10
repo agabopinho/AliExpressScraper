@@ -14,7 +14,7 @@ page.open(sys.args[1], {
     console.log('PAGE_OPEN_STATUS', status);
 
     if (status == "success") {
-        page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", function () {
+        page.includeJs("https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", function () {
             var attemps = 40;
 
             checkLoad();
@@ -46,7 +46,7 @@ page.open(sys.args[1], {
                 var returnedValue = page.evaluate(function () {
                     return {
                         Store: {
-                            StoreId: /storeId=\d*/gi.exec(runParams.relatedProductUrl)[0].replace(/[^\d]/gi, ''),
+                            StoreId: /store\/(\d*)/gi.exec($('.shop-name a').attr('href'))[1],
                             StoreName: $('.shop-name a').text(),
                             Since: $('.store-time em').text(),
                             Rating: $('.rank-num').text(),
@@ -107,8 +107,7 @@ page.open(sys.args[1], {
                                 }
                             })
                         },
-                        RunParams: runParams,
-                        PageConfig: pageConfig
+                        RunParams: runParams
                     }
                 });
 

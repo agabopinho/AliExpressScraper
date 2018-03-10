@@ -5,8 +5,6 @@ namespace AliScraperConsole.Models
 {
     public class ProductDetailModel
     {
-        public JToken PageConfig { get; set; }
-
         public ProductModel Product { get; set; }
 
         public JToken RunParams { get; set; }

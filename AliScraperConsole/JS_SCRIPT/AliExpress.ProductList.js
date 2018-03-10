@@ -11,7 +11,7 @@ page.open(sys.args[1], function (status) {
     console.log('PAGE_OPEN_STATUS', status);
 
     if (status == "success") {
-        page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", function () {
+        page.includeJs("https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", function () {
             var returnedValue = page.evaluate(function () {
                 var items = $('.list-item');
 

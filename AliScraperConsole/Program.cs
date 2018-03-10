@@ -69,19 +69,17 @@ namespace AliScraperConsole
             }
 
             var productId = Argument.GetArgumentLong("-ProductId");
-            var storeId = Argument.GetArgumentInt("-StoreId");
             var productUrl = Argument.GetArgumentString("-ProductUrl");
 
             var model = default(GetProductModel);
 
-            if (productId.HasValue && storeId.HasValue)
+            if (productId.HasValue)
             {
                 model = new GetProductModel
                 {
                     ProductId = productId.Value,
                     RefName = productId.Value.ToString(),
                     Url = AppSettings.AliExpressProductDetailUrl
-                      .Replace("{store_id}", storeId.Value.ToString())
                       .Replace("{product_id}", productId.Value.ToString())
                 };
             }
@@ -96,7 +94,7 @@ namespace AliScraperConsole
             }
             else
             {
-                Print.PrintText("AliGetProduct", "Use -ProductId={{value}} -StoreId={{value}} or -ProductUrl={{value}}");
+                Print.PrintText("AliGetProduct", "Use -ProductId={{value}} or -ProductUrl={{value}}");
 
                 return false;
             }
